@@ -28,19 +28,9 @@ process.on("SIGINT", function () {
 
 commands.forEach(function (command, index) {
   const [c, ...args] = command.split(" ")
-  const process = spawn(c, args, { signal })
-  const format = data => String(data).trim().replace(/^/gm, `${command}: `)
-
-  process.stdout.on("data", function (data) {
-    console.log(format(data))
-  })
-
-  process.stderr.on("data", function (data) {
-    console.info(format(data))
-  })
-
-  process.on("close", function (code) {
-    console.log(format(`exited with code ${code}`))
+  const process = spawn(c, args, {
+    signal,
+    stdio: "inherit"
   })
 
   process.on("error", function (err) {
