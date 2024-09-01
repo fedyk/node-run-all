@@ -11,5 +11,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fedyk/node-run-all.git"
+  }
 }
