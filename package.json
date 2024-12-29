@@ -4,7 +4,7 @@
   "main": "index.mjs",
   "type": "module",
   "bin": {
-    "run-all": "index.mjs"
+    "node-run-all": "index.mjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

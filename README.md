@@ -1,14 +1,17 @@
 # node-run-all
 
+## Install
+
 ```
-npm i node-run-all
+npm install node-run-all
 ```
 
+## Usage
 
 ```
 {
   "scripts": {
-    "all": "run-all \"command 1\" \"command 2\""
+    "all": "node-run-all \"command 1\" \"command 2\""
   }
 }
 ```
